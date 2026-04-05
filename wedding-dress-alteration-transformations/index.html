@@ -32,55 +32,96 @@
   <meta name="twitter:image" content="https://margowest.com/wp-content/uploads/2025/02/alterations.png">
 
   <!-- ═══ SCHEMA ════════════════════════════════════════════════════════════ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": ["LocalBusiness", "ClothingStore"],
-        "@id": "https://margowest.com/#business",
-        "name": "Margo West Bridal Couture",
-        "url": "https://margowest.com",
-        "telephone": "+1-972-918-9750",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "1403 Slocum Street, Suite 103",
-          "addressLocality": "Dallas",
-          "addressRegion": "TX",
-          "postalCode": "75207",
-          "addressCountry": "US"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.7",
-          "reviewCount": "230",
-          "bestRating": "5"
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "LocalBusiness",
+        "ClothingStore"
+      ],
+      "@id": "https://margowest.com/#business",
+      "name": "Margo West Bridal Couture",
+      "url": "https://margowest.com",
+      "telephone": "+1-972-918-9750",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1403 Slocum Street, Suite 103",
+        "addressLocality": "Dallas",
+        "addressRegion": "TX",
+        "postalCode": "75207",
+        "addressCountry": "US"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "230",
+        "bestRating": "5"
+      },
+      "areaServed": [
+        "Dallas, TX",
+        "Fort Worth, TX",
+        "Plano, TX",
+        "Frisco, TX",
+        "Southlake, TX",
+        "McKinney, TX",
+        "Allen, TX",
+        "Colleyville, TX",
+        "Prosper, TX",
+        "Irving, TX",
+        "Arlington, TX",
+        "Grapevine, TX"
+      ],
+      "hasMap": "https://maps.app.goo.gl/YZbLmuVDAVYPdE4h8",
+      "foundingDate": "1985",
+      "sameAs": [
+        "https://www.weddingwire.com/biz/margo-west-bridal-couture-dallas/",
+        "https://www.theknot.com/marketplace/margo-west-bridal-couture-dallas-tx"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://margowest.com/wedding-dress-alteration-transformations/#service",
+      "name": "Wedding Dress Alteration Transformations Dallas",
+      "description": "Dramatic wedding gown transformations in Dallas TX. Structural redesigns, sleeve additions, silhouette changes, and custom redesigns that other tailors and bridal shops won't attempt. 40+ years of couture craftsmanship.",
+      "provider": {
+        "@id": "https://margowest.com/#business"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Dallas",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
         }
       },
-      {
-        "@type": "Service",
-        "@id": "https://margowest.com/wedding-dress-alteration-transformations/#service",
-        "name": "Wedding Dress Alteration Transformations Dallas",
-        "description": "Dramatic wedding gown transformations in Dallas TX. Structural redesigns, sleeve additions, silhouette changes, and custom redesigns that other tailors and bridal shops won't attempt. 40+ years of couture craftsmanship.",
-        "provider": {"@id": "https://margowest.com/#business"},
-        "areaServed": {
-          "@type": "City",
-          "name": "Dallas",
-          "containedInPlace": {"@type": "State", "name": "Texas"}
+      "serviceType": "Bridal Alteration Transformation"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://margowest.com/"
         },
-        "serviceType": "Bridal Alteration Transformation"
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://margowest.com/"},
-          {"@type":"ListItem","position":2,"name":"Bridal Alterations Dallas","item":"https://margowest.com/bridal-alterations-dallas/"},
-          {"@type":"ListItem","position":3,"name":"Before & After Transformations","item":"https://margowest.com/wedding-dress-alteration-transformations/"}
-        ]
-      }
-    ]
-  }
-  </script>
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Bridal Alterations Dallas",
+          "item": "https://margowest.com/bridal-alterations-dallas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Before & After Transformations",
+          "item": "https://margowest.com/wedding-dress-alteration-transformations/"
+        }
+      ]
+    }
+  ]
+}</script>
 
   <!-- ═══ FONTS ════════════════════════════════════════════════════════════ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

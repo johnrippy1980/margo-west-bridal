@@ -32,92 +32,167 @@
   <meta name="twitter:image" content="https://margowest.com/wp-content/uploads/2024/12/LaurenDakota_FINALS-1127-scaled.jpg">
 
   <!-- ═══ SCHEMA: LOCAL BUSINESS ═══════════════════════════════════════════ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": ["LocalBusiness", "ClothingStore"],
-        "@id": "https://margowest.com/#business",
-        "name": "Margo West Bridal Couture",
-        "alternateName": "Margo West Bridal",
-        "description": "Award-winning bridal couture studio specializing in expert alterations, bespoke wedding gowns, and dramatic gown transformations in Dallas, TX. Founded by Margo West with 40+ years of couture craftsmanship.",
-        "url": "https://margowest.com",
-        "logo": "https://margowest.com/wp-content/uploads/2024/12/cropped-MARGO-LOGO-2.png",
-        "image": "https://margowest.com/wp-content/uploads/2024/12/LaurenDakota_FINALS-1127-scaled.jpg",
-        "telephone": "+1-972-918-9750",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "1403 Slocum Street, Suite 103",
-          "addressLocality": "Dallas",
-          "addressRegion": "TX",
-          "postalCode": "75207",
-          "addressCountry": "US"
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "LocalBusiness",
+        "ClothingStore"
+      ],
+      "@id": "https://margowest.com/#business",
+      "name": "Margo West Bridal Couture",
+      "alternateName": "Margo West Bridal",
+      "description": "Award-winning bridal couture studio specializing in expert alterations, bespoke wedding gowns, and dramatic gown transformations in Dallas, TX. Founded by Margo West with 40+ years of couture craftsmanship.",
+      "url": "https://margowest.com",
+      "logo": "https://margowest.com/wp-content/uploads/2024/12/cropped-MARGO-LOGO-2.png",
+      "image": "https://margowest.com/wp-content/uploads/2024/12/LaurenDakota_FINALS-1127-scaled.jpg",
+      "telephone": "+1-972-918-9750",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1403 Slocum Street, Suite 103",
+        "addressLocality": "Dallas",
+        "addressRegion": "TX",
+        "postalCode": "75207",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 32.784,
+        "longitude": -96.8285
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "17:00"
         },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 32.7840,
-          "longitude": -96.8285
-        },
-        "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "11:00",
+          "closes": "17:00"
+        }
+      ],
+      "priceRange": "$$-$$$",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Bridal Services",
+        "itemListElement": [
           {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-            "opens": "09:00",
-            "closes": "17:00"
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Bridal Alterations Dallas",
+              "description": "Expert bridal alterations and dramatic wedding gown transformations in Dallas TX. $100 consultation deposit applied to total."
+            }
           },
           {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Saturday","Sunday"],
-            "opens": "11:00",
-            "closes": "17:00"
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Custom Wedding Gowns Dallas",
+              "description": "Fully bespoke custom wedding gowns designed and crafted in Dallas TX. 6-12 month lead time."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Wedding Gown Design Additions Dallas",
+              "description": "Custom sleeves, detachable elements, beading and design additions to transform your wedding gown."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Wedding Dress Preservation Dallas",
+              "description": "Professional wedding dress cleaning and archival preservation in Dallas TX. Starting at $400."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Bridal Care Services Dallas",
+              "description": "Wedding dress pressing, steaming and professional measurements in Dallas TX."
+            }
           }
-        ],
-        "priceRange": "$$-$$$",
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Bridal Services",
-          "itemListElement": [
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Bridal Alterations Dallas","description":"Expert bridal alterations and dramatic wedding gown transformations in Dallas TX. $100 consultation deposit applied to total."}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Custom Wedding Gowns Dallas","description":"Fully bespoke custom wedding gowns designed and crafted in Dallas TX. 6-12 month lead time."}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Wedding Gown Design Additions Dallas","description":"Custom sleeves, detachable elements, beading and design additions to transform your wedding gown."}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Wedding Dress Preservation Dallas","description":"Professional wedding dress cleaning and archival preservation in Dallas TX. Starting at $400."}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Bridal Care Services Dallas","description":"Wedding dress pressing, steaming and professional measurements in Dallas TX."}}
-          ]
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.7",
-          "reviewCount": "230",
-          "bestRating": "5"
-        },
-        "award": ["WeddingWire Award Winner","The Knot Award Winner"],
-        "sameAs": [
-          "https://www.facebook.com/margowestbridal",
-          "https://www.instagram.com/margowestbridal",
-          "https://www.tiktok.com/@margowestbridal"
-        ],
-        "founder": {
-          "@type": "Person",
-          "name": "Margo West",
-          "jobTitle": "Founder & Bridal Couturier",
-          "description": "Bridal couturier with 40+ years of sewing experience based in Dallas, TX."
-        }
+        ]
       },
-      {
-        "@type": "WebSite",
-        "@id": "https://margowest.com/#website",
-        "url": "https://margowest.com",
-        "name": "Margo West Bridal Couture",
-        "publisher": {"@id": "https://margowest.com/#business"}
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "230",
+        "bestRating": "5"
       },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [{"@type":"ListItem","position":1,"name":"Home","item":"https://margowest.com/"}]
+      "award": [
+        "WeddingWire Award Winner",
+        "The Knot Award Winner"
+      ],
+      "sameAs": [
+        "https://www.facebook.com/margowestbridal",
+        "https://www.instagram.com/margowestbridal",
+        "https://www.tiktok.com/@margowestbridal",
+        "https://www.weddingwire.com/biz/margo-west-bridal-couture-dallas/",
+        "https://www.theknot.com/marketplace/margo-west-bridal-couture-dallas-tx"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Margo West",
+        "jobTitle": "Founder & Bridal Couturier",
+        "description": "Bridal couturier with 40+ years of sewing experience based in Dallas, TX."
+      },
+      "areaServed": [
+        "Dallas, TX",
+        "Fort Worth, TX",
+        "Plano, TX",
+        "Frisco, TX",
+        "Southlake, TX",
+        "McKinney, TX",
+        "Allen, TX",
+        "Colleyville, TX",
+        "Prosper, TX",
+        "Irving, TX",
+        "Arlington, TX",
+        "Grapevine, TX"
+      ],
+      "hasMap": "https://maps.app.goo.gl/YZbLmuVDAVYPdE4h8",
+      "foundingDate": "1985"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://margowest.com/#website",
+      "url": "https://margowest.com",
+      "name": "Margo West Bridal Couture",
+      "publisher": {
+        "@id": "https://margowest.com/#business"
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://margowest.com/"
+        }
+      ]
+    }
+  ]
+}</script>
 
   <!-- ═══ FONTS ══════════════════════════════════════════════════════════════ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

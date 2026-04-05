@@ -32,104 +32,140 @@
   <meta name="twitter:image" content="https://margowest.com/wp-content/uploads/2025/02/alterations.png">
 
   <!-- ═══ SCHEMA ════════════════════════════════════════════════════════════ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": ["LocalBusiness", "ClothingStore"],
-        "@id": "https://margowest.com/#business",
-        "name": "Margo West Bridal Couture",
-        "url": "https://margowest.com",
-        "telephone": "+1-972-918-9750",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "1403 Slocum Street, Suite 103",
-          "addressLocality": "Dallas",
-          "addressRegion": "TX",
-          "postalCode": "75207",
-          "addressCountry": "US"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.7",
-          "reviewCount": "230",
-          "bestRating": "5"
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "LocalBusiness",
+        "ClothingStore"
+      ],
+      "@id": "https://margowest.com/#business",
+      "name": "Margo West Bridal Couture",
+      "url": "https://margowest.com",
+      "telephone": "+1-972-918-9750",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1403 Slocum Street, Suite 103",
+        "addressLocality": "Dallas",
+        "addressRegion": "TX",
+        "postalCode": "75207",
+        "addressCountry": "US"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "230",
+        "bestRating": "5"
+      },
+      "areaServed": [
+        "Dallas, TX",
+        "Fort Worth, TX",
+        "Plano, TX",
+        "Frisco, TX",
+        "Southlake, TX",
+        "McKinney, TX",
+        "Allen, TX",
+        "Colleyville, TX",
+        "Prosper, TX",
+        "Irving, TX",
+        "Arlington, TX",
+        "Grapevine, TX"
+      ],
+      "hasMap": "https://maps.app.goo.gl/YZbLmuVDAVYPdE4h8",
+      "foundingDate": "1985",
+      "sameAs": [
+        "https://www.weddingwire.com/biz/margo-west-bridal-couture-dallas/",
+        "https://www.theknot.com/marketplace/margo-west-bridal-couture-dallas-tx"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://margowest.com/bridal-alterations-dallas/#service",
+      "name": "Bridal Alterations Dallas",
+      "description": "Expert wedding dress alterations and dramatic bridal gown transformations in Dallas, TX. Couture-level craftsmanship for custom fit, redesign, sleeves, trains, and changes other designers won't attempt. $100 consultation deposit applied to total.",
+      "provider": {
+        "@id": "https://margowest.com/#business"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Dallas",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
         }
       },
-      {
-        "@type": "Service",
-        "@id": "https://margowest.com/bridal-alterations-dallas/#service",
-        "name": "Bridal Alterations Dallas",
-        "description": "Expert wedding dress alterations and dramatic bridal gown transformations in Dallas, TX. Couture-level craftsmanship for custom fit, redesign, sleeves, trains, and changes other designers won't attempt. $100 consultation deposit applied to total.",
-        "provider": {"@id": "https://margowest.com/#business"},
-        "areaServed": {
-          "@type": "City",
-          "name": "Dallas",
-          "containedInPlace": {"@type": "State", "name": "Texas"}
-        },
-        "serviceType": "Bridal Alterations",
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "USD",
-          "description": "$100 consultation deposit applied toward total alteration cost"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://margowest.com/"},
-          {"@type":"ListItem","position":2,"name":"Bridal Alterations Dallas","item":"https://margowest.com/bridal-alterations-dallas/"}
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How much do bridal alterations cost in Dallas?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Bridal alteration costs in Dallas vary based on the complexity of the work needed. At Margo West, we begin with a $100 consultation deposit that is applied toward your total alteration cost. Simple hemming and taking-in work starts lower, while couture-level redesigns. Adding sleeves, custom trains, or structural transformations. Reflect the custom craftsmanship involved. Every quote is given after your consultation fitting."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "When should I schedule my bridal alteration appointment in Dallas?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We recommend scheduling your first bridal alteration consultation 4–6 months before your wedding date. This allows time for multiple fittings, any design additions, and a final fitting 2–4 weeks before your wedding. Rush appointments may be available. Call us at (972) 918-9750 to discuss your timeline."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What types of wedding dress alterations does Margo West do?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Margo West specializes in the full range of wedding dress alterations: taking in or letting out the bodice, hemming and bustle work, adding or removing sleeves, adding custom trains, structural reshaping, converting strapless gowns, adding illusion panels, beading and lace additions, and dramatic redesigns. We regularly do transformations other Dallas bridal shops won't attempt."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Where is Margo West Bridal Couture located in Dallas?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Margo West Bridal Couture is located at 1403 Slocum Street, Suite 103, Dallas, TX 75207. In the heart of the Dallas Design District. Hours are Monday through Friday 9am–5pm and Saturday–Sunday 11am–5pm. Call us at (972) 918-9750 to schedule your bridal alteration consultation."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can Margo West alter a wedding dress I bought online or from another store?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. We alter wedding dresses from any source. Department stores, online retailers, international designers, vintage finds, and heirloom gowns. Our expertise is in the craftsmanship, not where the dress came from. Bring your gown, your shoes, and your undergarments to your first fitting consultation."
-            }
-          }
-        ]
+      "serviceType": "Bridal Alterations",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "description": "$100 consultation deposit applied toward total alteration cost"
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://margowest.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Bridal Alterations Dallas",
+          "item": "https://margowest.com/bridal-alterations-dallas/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much do bridal alterations cost in Dallas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bridal alteration costs in Dallas vary based on the complexity of the work needed. At Margo West, we begin with a $100 consultation deposit that is applied toward your total alteration cost. Simple hemming and taking-in work starts lower, while couture-level redesigns. Adding sleeves, custom trains, or structural transformations. Reflect the custom craftsmanship involved. Every quote is given after your consultation fitting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I schedule my bridal alteration appointment in Dallas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We recommend scheduling your first bridal alteration consultation 4–6 months before your wedding date. This allows time for multiple fittings, any design additions, and a final fitting 2–4 weeks before your wedding. Rush appointments may be available. Call us at (972) 918-9750 to discuss your timeline."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of wedding dress alterations does Margo West do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Margo West specializes in the full range of wedding dress alterations: taking in or letting out the bodice, hemming and bustle work, adding or removing sleeves, adding custom trains, structural reshaping, converting strapless gowns, adding illusion panels, beading and lace additions, and dramatic redesigns. We regularly do transformations other Dallas bridal shops won't attempt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is Margo West Bridal Couture located in Dallas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Margo West Bridal Couture is located at 1403 Slocum Street, Suite 103, Dallas, TX 75207. In the heart of the Dallas Design District. Hours are Monday through Friday 9am–5pm and Saturday–Sunday 11am–5pm. Call us at (972) 918-9750 to schedule your bridal alteration consultation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Margo West alter a wedding dress I bought online or from another store?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We alter wedding dresses from any source. Department stores, online retailers, international designers, vintage finds, and heirloom gowns. Our expertise is in the craftsmanship, not where the dress came from. Bring your gown, your shoes, and your undergarments to your first fitting consultation."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
 
   <!-- ═══ FONTS ══════════════════════════════════════════════════════════════ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
