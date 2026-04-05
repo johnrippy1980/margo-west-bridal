@@ -226,7 +226,8 @@
     .pillars__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
     .pillar-card { background: var(--white); padding: 2.8rem 2rem; box-shadow: var(--shadow-sm); text-align: center; transition: box-shadow var(--transition), transform var(--transition); }
     .pillar-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
-    .pillar-card__icon { font-size: 2rem; margin-bottom: 1.4rem; display: block; }
+    .pillar-card__icon { font-size: 2rem; margin-bottom: 1.4rem; display: block; color: var(--gold); }
+    .pillar-card__icon svg { width: 2.4rem; height: 2.4rem; display: inline-block; }
     .pillar-card__num { font-family: var(--serif); font-size: 3rem; font-weight: 400; color: var(--gold); line-height: 1; display: block; margin-bottom: 0.4rem; }
     .pillar-card__title { font-family: var(--serif); font-size: 1.3rem; font-weight: 400; color: var(--text); margin-bottom: 0.75rem; }
     .pillar-card__desc { font-family: var(--sans); font-size: 0.82rem; font-weight: 300; color: var(--text-light); line-height: 1.65; }
@@ -487,7 +488,7 @@
 
       <div class="pillars__grid">
         <article class="pillar-card reveal" itemscope itemtype="https://schema.org/Service">
-          <span class="pillar-card__icon" aria-hidden="true">🎨</span>
+          <span class="pillar-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></span>
           <h3 class="pillar-card__title" itemprop="name">2-Hour Design Session</h3>
           <p class="pillar-card__desc">
             A private session with Margo. You bring your inspiration. Photos, Pinterest boards,
@@ -497,7 +498,7 @@
         </article>
 
         <article class="pillar-card reveal reveal--delay-1" itemscope itemtype="https://schema.org/Service">
-          <span class="pillar-card__icon" aria-hidden="true">📐</span>
+          <span class="pillar-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1" ry="1"/><path d="M9 12l2 2 4-4"/></svg></span>
           <h3 class="pillar-card__title" itemprop="name">Sketch Approval</h3>
           <p class="pillar-card__desc">
             A detailed sketch of your custom gown with fabric swatches attached.
@@ -507,7 +508,7 @@
         </article>
 
         <article class="pillar-card reveal reveal--delay-2" itemscope itemtype="https://schema.org/Service">
-          <span class="pillar-card__icon" aria-hidden="true">🪡</span>
+          <span class="pillar-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/><path d="M6 12h2M16 12h2M12 6v2M12 16v2"/></svg></span>
           <h3 class="pillar-card__title" itemprop="name">Muslin Fitting</h3>
           <p class="pillar-card__desc">
             Before any luxury fabric is cut, a muslin mock-up is built to your exact measurements.
@@ -516,7 +517,7 @@
         </article>
 
         <article class="pillar-card reveal reveal--delay-3" itemscope itemtype="https://schema.org/Service">
-          <span class="pillar-card__icon" aria-hidden="true">👗</span>
+          <span class="pillar-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg></span>
           <h3 class="pillar-card__title" itemprop="name">Final Construction &amp; Delivery</h3>
           <p class="pillar-card__desc">
             The gown is built in your chosen fabrics with multiple fittings along the way.

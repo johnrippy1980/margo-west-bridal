@@ -924,11 +924,29 @@
     hamburger.addEventListener('click', () => { mobileNav.classList.add('open'); hamburger.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; });
     closeBtn.addEventListener('click',  () => { mobileNav.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; });
 
-    // Category filter (visual only. Full filtering would require JS or CMS)
+    // Category filter — shows/hides post cards based on category label
+    const catMap = {
+      'all':        null,
+      'alterations': ['alterations'],
+      'gown care':   ['gown care'],
+      'fashion':     ['fashion', 'bridal fashion'],
+      'planning':    ['planning']
+    };
     document.querySelectorAll('.cat-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
+        const key = btn.textContent.trim().toLowerCase();
+        const allowed = catMap[key];
+        document.querySelectorAll('.post-card').forEach(card => {
+          const catEl = card.querySelector('.post-card__cat');
+          const cat = catEl ? catEl.textContent.trim().toLowerCase() : '';
+          if (!allowed || allowed.includes(cat)) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
       });
     });
   </script>
