@@ -624,15 +624,19 @@
       gap: 0 3rem;
     }
     .trust-bar__item {
-      font-family: var(--serif);
-      font-size: 1.15rem;
-      font-weight: 400;
-      font-style: italic;
-      color: rgba(255,255,255,0.55);
-      letter-spacing: 0.02em;
-      transition: color var(--transition);
+      display: flex;
+      align-items: center;
       padding: 0.3rem 0;
       position: relative;
+      opacity: 0.6;
+      transition: opacity var(--transition);
+    }
+    .trust-bar__item img {
+      height: 28px;
+      width: auto;
+      max-width: 140px;
+      filter: brightness(0) invert(1);
+      display: block;
     }
     .trust-bar__item::after {
       content: '·';
@@ -641,7 +645,7 @@
       color: rgba(255,255,255,0.2);
     }
     .trust-bar__item:last-child::after { display: none; }
-    .trust-bar__item:hover { color: var(--gold-light); }
+    .trust-bar__item:hover { opacity: 1; }
     .trust-bar__awards {
       display: flex;
       align-items: center;
@@ -1643,12 +1647,24 @@
     <div class="container">
       <p class="trust-bar__label">As Featured In</p>
       <div class="trust-bar__row" role="list" aria-label="Press mentions">
-        <span class="trust-bar__item" role="listitem">Modern Luxury Magazine</span>
-        <span class="trust-bar__item" role="listitem">Brides of Austin</span>
-        <span class="trust-bar__item" role="listitem">Dallas Wedding Guide</span>
-        <span class="trust-bar__item" role="listitem">House of DIFFA Dallas</span>
-        <span class="trust-bar__item" role="listitem">WeddingWire</span>
-        <span class="trust-bar__item" role="listitem">The Knot</span>
+        <span class="trust-bar__item" role="listitem">
+          <img src="/images/logo-modernluxury.svg" alt="Modern Luxury Magazine" height="28" loading="lazy">
+        </span>
+        <span class="trust-bar__item" role="listitem">
+          <img src="/images/logo-wedsociety.svg" alt="Wed Society Austin" height="28" loading="lazy">
+        </span>
+        <span class="trust-bar__item" role="listitem">
+          <img src="/images/logo-dallasweddingguide.svg" alt="Dallas Wedding Guide" height="28" loading="lazy">
+        </span>
+        <span class="trust-bar__item" role="listitem">
+          <img src="/images/logo-diffa.svg" alt="House of DIFFA Dallas" height="28" loading="lazy">
+        </span>
+        <span class="trust-bar__item" role="listitem">
+          <img src="/images/logo-weddingwire.svg" alt="WeddingWire" height="28" loading="lazy">
+        </span>
+        <span class="trust-bar__item" role="listitem">
+          <img src="/images/logo-theknot.svg" alt="The Knot" height="28" loading="lazy">
+        </span>
       </div>
 
       <div class="trust-bar__awards" role="list" aria-label="Industry awards">
