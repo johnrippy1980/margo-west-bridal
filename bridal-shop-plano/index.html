@@ -232,6 +232,9 @@
     @media(max-width:640px){.footer__grid{grid-template-columns:1fr 1fr;}.services__grid{grid-template-columns:1fr;}}
     @media(max-width:480px){.footer__grid{grid-template-columns:1fr;}}
   </style>
+  <!-- Calendly popup widget -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
 <body>
 
@@ -628,6 +631,20 @@
     if('IntersectionObserver' in window){const o=new IntersectionObserver(e=>e.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');o.unobserve(e.target);}}),{threshold:0.1,rootMargin:'0px 0px -40px 0px'});r.forEach(el=>o.observe(el));}else{r.forEach(el=>el.classList.add('visible'));}
     const hb=document.querySelector('.nav__hamburger');const nl=document.querySelector('.nav__links');
     if(hb&&nl){hb.addEventListener('click',()=>{const op=hb.getAttribute('aria-expanded')==='true';hb.setAttribute('aria-expanded',String(!op));nl.style.cssText=op?'':'display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:var(--forest-dark);padding:1.5rem 2rem;gap:1.2rem;z-index:999;';});}
+  </script>
+  <script>
+  // Calendly popup: intercept any link to /book-bridal-consultation-dallas/
+  (function(){
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a[href*="/book-bridal-consultation-dallas"]');
+      if(!a) return;
+      if(window.Calendly && typeof Calendly.initPopupWidget === 'function'){
+        e.preventDefault();
+        Calendly.initPopupWidget({ url: 'https://calendly.com/margowest' });
+      }
+      // else: fall through to the form page as non-JS fallback
+    });
+  })();
   </script>
 </body>
 </html>

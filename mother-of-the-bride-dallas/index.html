@@ -292,6 +292,9 @@
     @media(max-width:640px){.footer__grid{grid-template-columns:1fr 1fr;}.services__grid{grid-template-columns:1fr;}}
     @media(max-width:480px){.footer__grid{grid-template-columns:1fr;}}
   </style>
+  <!-- Calendly popup widget -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
 <body>
 
@@ -632,6 +635,20 @@
     const hamburger=document.querySelector('.nav__hamburger');const navLinks=document.querySelector('.nav__links');
     if(hamburger&&navLinks){hamburger.addEventListener('click',()=>{const open=hamburger.getAttribute('aria-expanded')==='true';hamburger.setAttribute('aria-expanded',String(!open));navLinks.style.cssText=open?'':'display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:var(--forest-dark);padding:1.5rem 2rem;gap:1.2rem;z-index:999;';});}
     document.querySelectorAll('.faq__question').forEach(btn=>{btn.addEventListener('click',()=>{const item=btn.closest('.faq__item');const wasOpen=item.classList.contains('open');document.querySelectorAll('.faq__item.open').forEach(el=>{el.classList.remove('open');el.querySelector('.faq__question').setAttribute('aria-expanded','false');});if(!wasOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');}});});
+  </script>
+  <script>
+  // Calendly popup: intercept any link to /book-bridal-consultation-dallas/
+  (function(){
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a[href*="/book-bridal-consultation-dallas"]');
+      if(!a) return;
+      if(window.Calendly && typeof Calendly.initPopupWidget === 'function'){
+        e.preventDefault();
+        Calendly.initPopupWidget({ url: 'https://calendly.com/margowest' });
+      }
+      // else: fall through to the form page as non-JS fallback
+    });
+  })();
   </script>
 </body>
 </html>

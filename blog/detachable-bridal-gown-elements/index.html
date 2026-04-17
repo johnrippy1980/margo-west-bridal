@@ -13,6 +13,10 @@
   <meta property="og:type" content="article">
   <meta property="og:image" content="/images/hero-couture.webp">
   <meta property="og:site_name" content="Margo West Bridal Couture">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Detachable Gown Elements: Two Looks, One Dress | Margo West Bridal Couture">
+  <meta name="twitter:description" content="Detachable sleeves, trains, overskirts, and sashes. How Margo West creates removable gown elements that let Dallas brides have two distinct looks for ceremony and reception.">
+  <meta name="twitter:image" content="/images/hero-couture.webp">
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -176,6 +180,9 @@
   ]
 }
 </script>
+  <!-- Calendly popup widget -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
 <body>
   <header class="nav" id="main-nav" role="banner">
@@ -435,6 +442,20 @@
   <script>
     const hb=document.querySelector('.nav__hamburger');const nl=document.querySelector('.nav__links');
     if(hb&&nl){hb.addEventListener('click',()=>{const op=hb.getAttribute('aria-expanded')==='true';hb.setAttribute('aria-expanded',String(!op));nl.style.cssText=op?'':'display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:var(--forest-dark);padding:1.5rem 2rem;gap:1.2rem;z-index:999;';});}
+  </script>
+  <script>
+  // Calendly popup: intercept any link to /book-bridal-consultation-dallas/
+  (function(){
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a[href*="/book-bridal-consultation-dallas"]');
+      if(!a) return;
+      if(window.Calendly && typeof Calendly.initPopupWidget === 'function'){
+        e.preventDefault();
+        Calendly.initPopupWidget({ url: 'https://calendly.com/margowest' });
+      }
+      // else: fall through to the form page as non-JS fallback
+    });
+  })();
   </script>
 </body>
 </html>

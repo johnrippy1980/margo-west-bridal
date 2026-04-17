@@ -1563,6 +1563,9 @@
       .about__stats { gap: 2rem; }
     }
   </style>
+  <!-- Calendly popup widget -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
 
 <!-- ════════════════════════════════════════════════════════════════════════
@@ -1740,7 +1743,7 @@
         <!-- Card 1: Alterations (primary/largest) -->
         <article class="service-card" itemscope itemtype="https://schema.org/Service">
           <img class="service-card__img"
-               src="/images/alterations.png"
+               src="/images/alterations.jpg"
                alt="Bridal alteration in progress. Dramatic transformation by Margo West, Dallas TX"
                width="640" height="800" loading="lazy"
                itemprop="image">
@@ -2107,7 +2110,7 @@
       <div class="blog__grid">
         <!-- Post 1 -->
         <article class="blog-card reveal" itemscope itemtype="https://schema.org/BlogPosting">
-          <a href="/2025-bridal-fashion-forecast-wedding-dress-trends/" class="blog-card__img-wrap"
+          <a href="/blog/2025-bridal-fashion-trends-dallas/" class="blog-card__img-wrap"
              aria-label="Read: 2025 Bridal Fashion Forecast">
             <img class="blog-card__img"
                  src="/images/IMG_6404-1.jpeg"
@@ -2118,7 +2121,7 @@
           <div class="blog-card__body">
             <p class="blog-card__cat">Style &middot; News</p>
             <h3 class="blog-card__title" itemprop="name">
-              <a href="/2025-bridal-fashion-forecast-wedding-dress-trends/">
+              <a href="/blog/2025-bridal-fashion-trends-dallas/">
                 2025 Bridal Fashion Forecast: Wedding Dress Trends
               </a>
             </h3>
@@ -2127,7 +2130,7 @@
             </p>
             <div class="blog-card__footer">
               <span>December 2024</span>
-              <a class="blog-card__read" href="/2025-bridal-fashion-forecast-wedding-dress-trends/"
+              <a class="blog-card__read" href="/blog/2025-bridal-fashion-trends-dallas/"
                  aria-label="Read 2025 Bridal Fashion Forecast">Read</a>
             </div>
           </div>
@@ -2135,7 +2138,7 @@
 
         <!-- Post 2 -->
         <article class="blog-card reveal reveal--delay-1" itemscope itemtype="https://schema.org/BlogPosting">
-          <a href="/destination-wedding-dress-care/" class="blog-card__img-wrap"
+          <a href="/blog/destination-wedding-dress-care-dallas/" class="blog-card__img-wrap"
              aria-label="Read: Destination Wedding Dress Care">
             <img class="blog-card__img"
                  src="/images/IMG_2656.jpg"
@@ -2146,7 +2149,7 @@
           <div class="blog-card__body">
             <p class="blog-card__cat">Style &middot; Occasions</p>
             <h3 class="blog-card__title" itemprop="name">
-              <a href="/destination-wedding-dress-care/">
+              <a href="/blog/destination-wedding-dress-care-dallas/">
                 Destination Wedding Dress Care: Keep Your Gown Flawless
               </a>
             </h3>
@@ -2155,7 +2158,7 @@
             </p>
             <div class="blog-card__footer">
               <span>November 2024</span>
-              <a class="blog-card__read" href="/destination-wedding-dress-care/"
+              <a class="blog-card__read" href="/blog/destination-wedding-dress-care-dallas/"
                  aria-label="Read Destination Wedding Dress Care">Read</a>
             </div>
           </div>
@@ -2163,7 +2166,7 @@
 
         <!-- Post 3 -->
         <article class="blog-card reveal reveal--delay-2" itemscope itemtype="https://schema.org/BlogPosting">
-          <a href="/glamorous-fall-fabrics-detachable-sleeves-jackets/" class="blog-card__img-wrap"
+          <a href="/blog/glamorous-fall-bridal-fabrics-dallas/" class="blog-card__img-wrap"
              aria-label="Read: Glamorous Fall Fabrics">
             <img class="blog-card__img"
                  src="/images/illusion_sleeves_480x480.webp"
@@ -2174,7 +2177,7 @@
           <div class="blog-card__body">
             <p class="blog-card__cat">Style</p>
             <h3 class="blog-card__title" itemprop="name">
-              <a href="/glamorous-fall-fabrics-detachable-sleeves-jackets/">
+              <a href="/blog/glamorous-fall-bridal-fabrics-dallas/">
                 Glamorous Fall Fabrics, Detachable Sleeves &amp; Jackets
               </a>
             </h3>
@@ -2183,7 +2186,7 @@
             </p>
             <div class="blog-card__footer">
               <span>October 2024</span>
-              <a class="blog-card__read" href="/glamorous-fall-fabrics-detachable-sleeves-jackets/"
+              <a class="blog-card__read" href="/blog/glamorous-fall-bridal-fabrics-dallas/"
                  aria-label="Read Glamorous Fall Fabrics">Read</a>
             </div>
           </div>
@@ -2355,6 +2358,20 @@
           : 'display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:var(--forest-dark);padding:1.5rem 2rem;gap:1.2rem;z-index:999;';
       });
     }
+  </script>
+  <script>
+  // Calendly popup: intercept any link to /book-bridal-consultation-dallas/
+  (function(){
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a[href*="/book-bridal-consultation-dallas"]');
+      if(!a) return;
+      if(window.Calendly && typeof Calendly.initPopupWidget === 'function'){
+        e.preventDefault();
+        Calendly.initPopupWidget({ url: 'https://calendly.com/margowest' });
+      }
+      // else: fall through to the form page as non-JS fallback
+    });
+  })();
   </script>
 </body>
 </html>

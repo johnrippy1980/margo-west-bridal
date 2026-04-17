@@ -303,6 +303,9 @@
     @media(max-width:900px){.intro__inner{grid-template-columns:1fr;gap:3rem;}.intro__badge{display:none;}.faq__inner{grid-template-columns:1fr;gap:3rem;}.faq__sidebar{position:static;}.testimonials__grid{grid-template-columns:1fr 1fr;}}
     @media(max-width:640px){.steps-grid{grid-template-columns:1fr;}.testimonials__grid{grid-template-columns:1fr;}.related__grid{grid-template-columns:1fr;}.footer__grid{grid-template-columns:1fr;gap:2rem;}.nav__links{display:none;}.nav__hamburger{display:flex;}}
   </style>
+  <!-- Calendly popup widget -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
 <body>
   <header class="nav" id="main-nav" role="banner">
@@ -670,6 +673,20 @@
         if (!wasOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
       });
     });
+  </script>
+  <script>
+  // Calendly popup: intercept any link to /book-bridal-consultation-dallas/
+  (function(){
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a[href*="/book-bridal-consultation-dallas"]');
+      if(!a) return;
+      if(window.Calendly && typeof Calendly.initPopupWidget === 'function'){
+        e.preventDefault();
+        Calendly.initPopupWidget({ url: 'https://calendly.com/margowest' });
+      }
+      // else: fall through to the form page as non-JS fallback
+    });
+  })();
   </script>
 </body>
 </html>
